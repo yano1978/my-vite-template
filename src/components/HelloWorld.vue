@@ -18,7 +18,10 @@ defineProps({
       v-model="tooltipText"
     />
     <br />
-    <span>Hover Over me <ToolTip :text="tooltipText" /></span>
+    <span
+      >Hover Over me
+      <ToolTip :options="{ placement: 'right' }" :text="tooltipText"
+    /></span>
     <br />
     <br />
     <h1 class="text-blue-700">{{ msg }}</h1>
