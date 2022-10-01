@@ -20,8 +20,11 @@ defineProps({
     <br />
     <span
       >Hover Over me
-      <ToolTip :options="{ placement: 'right' }" :text="tooltipText"
+      <ToolTip :options="{ placement: 'bottom' }" :text="tooltipText"
     /></span>
+    <br />
+    <br />
+    <span>And me <ToolTip :text="tooltipText" /></span>
     <br />
     <br />
     <h1 class="text-blue-700">{{ msg }}</h1>

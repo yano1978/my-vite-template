@@ -5,7 +5,9 @@ import { toolTipPlugin } from "./toolTipPlugin";
 
 import "./assets/main.css";
 
-const app = createApp(App).use(toolTipPlugin);
+const app = createApp(App).use(toolTipPlugin, {
+  placement: "right",
+});
 
 app.use(router);
 
