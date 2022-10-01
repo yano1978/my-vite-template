@@ -4,7 +4,15 @@ import router from "./router";
 
 import "./assets/main.css";
 
-const app = createApp(App);
+const myFirstPlugin = {
+  install(app, options) {
+    console.log("Hello plugin", options);
+  },
+};
+
+const app = createApp(App).use(myFirstPlugin, {
+  option1: true,
+});
 
 app.use(router);
 
