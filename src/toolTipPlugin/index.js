@@ -1,5 +1,6 @@
 import { defineAsyncComponent } from "vue";
 import { defu } from "defu";
+import { hideAll } from "tippy.js";
 export const tooltipOptionsInject = Symbol();
 
 export function toolTipPlugin(app, options) {
@@ -7,6 +8,8 @@ export function toolTipPlugin(app, options) {
     arrow: false,
     ...options,
   });
+
+  app.config.globalProperties.$hideAllTooltips = hideAll;
 
   app.provide(tooltipOptionsInject, options);
   app.component(

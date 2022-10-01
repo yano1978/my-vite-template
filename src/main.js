@@ -7,6 +7,8 @@ import "./assets/main.css";
 
 const app = createApp(App).use(toolTipPlugin, {
   placement: "right",
+  trigger: "click",
+  hideOnClick: false,
 });
 
 app.use(router);
